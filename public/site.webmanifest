@@ -1,0 +1,26 @@
+{
+  "name": "CS AB AUTO",
+  "short_name": "CS AB AUTO",
+  "description": "Vente de véhicules d'occasion et atelier mécanique à Meurchin",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#f5c400",
+  "icons": [
+    {
+      "src": "/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

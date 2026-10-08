@@ -1,0 +1,166 @@
+.vehicule-card {
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+  text-align: left;
+}
+
+.vehicule-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  border-color: #f5c400;
+}
+
+.vehicule-card-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: #111;
+  overflow: hidden;
+  display: block;
+}
+
+.vehicule-card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.vehicule-card:hover .vehicule-card-image-wrap img {
+  transform: scale(1.04);
+}
+
+.vehicule-badge-sold {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #e63946;
+  color: #ffffff;
+  padding: 6px 14px;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(230, 57, 70, 0.4);
+  z-index: 2;
+}
+
+.vehicule-card-body {
+  padding: 20px 22px 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.vehicule-card-brand {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  color: #c4a500;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 6px;
+}
+
+.vehicule-card-title {
+  margin: 0 0 16px;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.vehicule-card-title a {
+  color: #111111;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.vehicule-card-title a:hover {
+  color: #c4a500;
+}
+
+.vehicule-card-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.vehicule-spec-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #f7f7f8;
+  color: #444444;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid #ebebeb;
+}
+
+.vehicule-spec-pill .spec-icon {
+  font-size: 12px;
+}
+
+.vehicule-card-footer {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.vehicule-card-price {
+  font-size: 22px;
+  font-weight: 900;
+  color: #111111;
+  letter-spacing: -0.5px;
+}
+
+.vehicule-card-price span {
+  color: #d2b000;
+  font-size: 18px;
+  margin-left: 2px;
+}
+
+.vehicule-card-action {
+  display: inline-flex;
+  align-items: center;
+  background: #111111;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  padding: 9px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.vehicule-card:hover .vehicule-card-action {
+  background: #f5c400;
+  color: #000000;
+}
+
+.vehicule-card-sold {
+  opacity: 0.88;
+}
+
+.vehicule-card-sold:hover {
+  border-color: #e63946;
+}

@@ -1,0 +1,246 @@
+.inscription-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: #111111;
+}
+
+.inscription-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 50px;
+  background: #ffffff;
+}
+
+.inscription-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.inscription-logo span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #f5c400;
+  color: #111111;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.inscription-logo strong {
+  font-size: 20px;
+  color: #111111;
+  letter-spacing: 1px;
+}
+
+.inscription-label {
+  margin: 0 0 10px;
+  color: #f5c400;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.inscription-card h1 {
+  margin: 0 0 15px;
+  font-size: 36px;
+  line-height: 1;
+  color: #111111;
+}
+
+.inscription-description {
+  margin-bottom: 35px;
+  color: #777777;
+  line-height: 1.6;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #111111;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #dddddd;
+  background: #ffffff;
+  color: #111111;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.form-group input::placeholder {
+  color: #888888;
+}
+
+.form-group input:focus {
+  border-color: #f5c400;
+}
+
+.inscription-card button {
+  width: 100%;
+  padding: 16px;
+  margin-top: 10px;
+  border: none;
+  background: #f5c400;
+  color: #111111;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.inscription-card button:hover {
+  background: #111111;
+  color: #ffffff;
+}
+
+.inscription-error {
+  padding: 12px;
+  margin-bottom: 20px;
+  background: #ffe5e5;
+  color: #c00000;
+  font-size: 13px;
+}
+
+.inscription-logo a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inscription-login {
+  margin-top: 25px;
+  text-align: center;
+  color: #777777;
+  font-size: 14px;
+}
+
+.inscription-login a {
+  color: #111111;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.inscription-login a:hover {
+  color: #f5c400;
+}
+
+/* Post-registration screen */
+.inscription-confirm-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 4px solid #f5c400;
+  padding: 24px 20px;
+  margin-bottom: 25px;
+}
+
+.inscription-confirm-text {
+  margin: 0 0 12px;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.inscription-email-badge {
+  display: inline-block;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 6px 14px;
+  font-weight: 800;
+  color: #0f172a;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  word-break: break-all;
+}
+
+.inscription-confirm-hint {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.inscription-resend-feedback {
+  padding: 12px;
+  margin-bottom: 16px;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.inscription-resend-feedback.success {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  color: #1e40af;
+}
+
+.inscription-resend-feedback.error {
+  background: #ffe5e5;
+  border: 1px solid #fed7d7;
+  color: #c00000;
+}
+
+.inscription-button-secondary {
+  width: 100%;
+  padding: 15px;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.inscription-button-secondary:hover:not(:disabled) {
+  background: #333333;
+}
+
+.inscription-button-secondary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.inscription-back-link {
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  color: #111111;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.inscription-back-link:hover {
+  color: #f5c400;
+}
+
+@media (max-width: 600px) {
+  .inscription-card {
+    padding: 30px 20px;
+  }
+
+  .inscription-card h1 {
+    font-size: 30px;
+  }
+}

@@ -1,0 +1,112 @@
+.services {
+  max-width: 1250px;
+  margin: auto;
+  padding: 110px 25px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+
+  margin-bottom: 55px;
+}
+
+.section-label {
+  color: #c4a500;
+
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 3px;
+}
+
+.section-header h2 {
+  margin: 12px 0 0;
+
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: 1;
+}
+
+.section-header h2 span {
+  color: #d2b000;
+}
+
+.section-header > p {
+  max-width: 350px;
+
+  color: #666;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+
+.service-card {
+  position: relative;
+
+  min-height: 260px;
+  padding: 35px;
+
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  background: #0a0a0a;
+  color: white;
+}
+
+.service-number {
+  color: #b7b7b7;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.service-card h3 {
+  margin-top: 65px;
+
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.service-card p {
+  color: #777;
+
+  line-height: 1.6;
+}
+
+.service-card:hover p {
+  color: #aaa;
+}
+
+.service-arrow {
+  position: absolute;
+
+  right: 30px;
+  bottom: 25px;
+
+  color: #ffd400;
+  font-size: 25px;
+}
+
+@media (max-width: 800px) {
+  .section-header {
+    display: block;
+  }
+
+  .section-header > p {
+    margin-top: 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}

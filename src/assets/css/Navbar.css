@@ -1,0 +1,147 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: rgba(10, 10, 10, 0.96);
+  border-bottom: 1px solid rgba(255, 212, 0, 0.2);
+}
+
+.navbar-container {
+  max-width: 1250px;
+  margin: auto;
+  height: 80px;
+  padding: 0 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-logo span {
+  background: #ffd400;
+  color: #000;
+  font-size: 22px;
+  font-weight: 900;
+
+  padding: 7px 9px;
+  transform: skew(-10deg);
+}
+
+.navbar-logo strong {
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #ffd400;
+}
+
+.navbar-button {
+  background: #ffd400 !important;
+  color: #000 !important;
+
+  padding: 13px 20px;
+  font-weight: 800 !important;
+}
+.navbar-login,
+.navbar-register {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s ease;
+}
+
+/* CONNEXION */
+.navbar-login {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.navbar-login:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+/* INSCRIPTION */
+.navbar-register {
+  background: #f5c400;
+  color: #111111;
+  border: 1px solid #f5c400;
+}
+
+.navbar-register:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+.mobile-menu {
+  display: none;
+
+  border: none;
+  background: transparent;
+  color: white;
+
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  .mobile-menu {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+
+    padding: 25px;
+
+    background: #0a0a0a;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links a {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+  }
+}

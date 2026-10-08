@@ -1,0 +1,344 @@
+/* ReinitialiserMotDePasse.css - CS AB AUTO */
+
+.reset-page {
+  min-height: 100vh;
+  background: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.reset-container {
+  width: 100%;
+  max-width: 520px;
+}
+
+.reset-brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.reset-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.reset-logo span {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5c400;
+  color: #111111;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.reset-logo strong {
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+
+.reset-card {
+  background: #ffffff;
+  padding: 45px;
+  border-top: 4px solid #f5c400;
+}
+
+.reset-header {
+  margin-bottom: 25px;
+}
+
+.reset-label {
+  margin: 0 0 10px;
+  color: #d8ad00;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.reset-header h1 {
+  margin: 0 0 12px;
+  color: #111111;
+  font-size: 30px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.reset-description {
+  margin: 0;
+  color: #666666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Loading state */
+.reset-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 0;
+  color: #555555;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.reset-spinner {
+  width: 44px;
+  height: 44px;
+  border: 4px solid #eeeeee;
+  border-top-color: #f5c400;
+  border-radius: 50%;
+  animation: resetSpin 0.9s linear infinite;
+}
+
+@keyframes resetSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Success state */
+.reset-success-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-left: 4px solid #16a34a;
+  padding: 22px;
+  margin-bottom: 25px;
+}
+
+.reset-success-title {
+  margin: 0 0 8px;
+  color: #166534;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.reset-success-desc {
+  margin: 0;
+  color: #15803d;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Error banner */
+.reset-error-box {
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-left: 4px solid #dc2626;
+  padding: 20px;
+  margin-bottom: 25px;
+}
+
+.reset-error-title {
+  margin: 0 0 8px;
+  color: #991b1b;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.reset-error-desc {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.reset-form-error {
+  margin-bottom: 20px;
+  padding: 13px 15px;
+  background: #fff0f0;
+  border-left: 4px solid #d00000;
+  color: #b00000;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Form fields */
+.reset-field {
+  margin-bottom: 20px;
+}
+
+.reset-field label {
+  display: block;
+  margin-bottom: 8px;
+  color: #111111;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.reset-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.reset-input {
+  width: 100%;
+  height: 52px;
+  padding: 0 50px 0 15px;
+  border: 1px solid #dddddd;
+  outline: none;
+  background: #ffffff;
+  color: #111111;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+
+.reset-input:focus {
+  border-color: #f5c400;
+  box-shadow: 0 0 0 2px rgba(245, 196, 0, 0.12);
+}
+
+.reset-toggle-btn {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #777777;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px;
+  transition: color 0.2s ease;
+}
+
+.reset-toggle-btn:hover {
+  color: #111111;
+}
+
+/* Password strength indicator */
+.reset-strength-container {
+  margin-top: 8px;
+}
+
+.reset-strength-bars {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.reset-strength-bar {
+  flex: 1;
+  height: 4px;
+  background: #e2e8f0;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.reset-strength-bar.active-weak {
+  background: #ef4444;
+}
+
+.reset-strength-bar.active-medium {
+  background: #f59e0b;
+}
+
+.reset-strength-bar.active-strong {
+  background: #10b981;
+}
+
+.reset-strength-text {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748b;
+}
+
+.reset-strength-text.weak {
+  color: #dc2626;
+}
+
+.reset-strength-text.medium {
+  color: #d97706;
+}
+
+.reset-strength-text.strong {
+  color: #059669;
+}
+
+/* Buttons and Links */
+.reset-submit {
+  width: 100%;
+  height: 54px;
+  background: #f5c400;
+  color: #111111;
+  border: none;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.reset-submit:hover:not(:disabled) {
+  background: #111111;
+  color: #ffffff;
+}
+
+.reset-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.reset-button-secondary {
+  width: 100%;
+  height: 50px;
+  background: #111111;
+  color: #ffffff;
+  border: none;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.reset-button-secondary:hover {
+  background: #333333;
+}
+
+.reset-footer {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.reset-back-link {
+  color: #111111;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.reset-back-link:hover {
+  color: #f5c400;
+}
+
+@media (max-width: 600px) {
+  .reset-card {
+    padding: 30px 20px;
+  }
+
+  .reset-header h1 {
+    font-size: 26px;
+  }
+}
