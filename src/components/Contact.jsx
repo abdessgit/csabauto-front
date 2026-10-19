@@ -100,7 +100,7 @@ export default function Contact() {
                         </div>
                         <div>
                             <strong>📞 TÉLÉPHONE</strong>
-                            <span>06 63 40 76 94</span>
+                            <span>06 65 09 12 39</span>
                         </div>
                         <div>
                             <strong>🕐 HORAIRES</strong>

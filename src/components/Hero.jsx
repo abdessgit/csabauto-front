@@ -32,9 +32,9 @@ export default function Hero() {
                         NOS VÉHICULES
                     </Link>
 
-                    <a href="#contact" className="hero-button secondary">
+                    <Link to="/#contact" className="hero-button secondary">
                         PRENDRE RENDEZ-VOUS
-                    </a>
+                    </Link>
 
                 </div>
 

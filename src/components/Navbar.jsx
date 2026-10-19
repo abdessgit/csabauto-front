@@ -12,7 +12,7 @@ export default function Navbar() {
 
             <div className="navbar-container">
 
-                <Link to="/" className="navbar-logo">
+                <Link to="/" className="navbar-logo" onClick={() => setMenuOpen(false)}>
                     <span>CSAB</span>
                     <strong> AUTO</strong>
                 </Link>
@@ -26,49 +26,51 @@ export default function Navbar() {
                 </button>
 
                 <nav className={`navbar-links ${menuOpen ? 'open' : ''}`}>
-                    <a href="#accueil" onClick={() => setMenuOpen(false)}>
+                    <Link to="/#accueil" onClick={() => setMenuOpen(false)}>
                         Accueil
-                    </a>
+                    </Link>
 
-                    <a href="#services" onClick={() => setMenuOpen(false)}>
+                    <Link to="/#services" onClick={() => setMenuOpen(false)}>
                         Services
-                    </a>
+                    </Link>
 
-                    <a href="#about" onClick={() => setMenuOpen(false)}>
+                    <Link to="/#about" onClick={() => setMenuOpen(false)}>
                         Notre garage
-                    </a>
+                    </Link>
 
                     <Link to="/vehicules" onClick={() => setMenuOpen(false)}>
                         Véhicules
                     </Link>
 
-                    <a href="#contact" onClick={() => setMenuOpen(false)}>
+                    <Link to="/#contact" onClick={() => setMenuOpen(false)}>
                         Contact
-                    </a>
-
-                    <Link
-                        to="/login"
-                        className="navbar-login"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        CONNEXION
                     </Link>
 
-                    <Link
-                        to="/inscription"
-                        className="navbar-register"
-                        onClick={() => setMenuOpen(false)}
-                    >
-                        INSCRIPTION
-                    </Link>
+                    <div className="navbar-auth-buttons">
+                        <Link
+                            to="/login"
+                            className="navbar-login"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            CONNEXION
+                        </Link>
 
-                    <a
-                        href="#contact"
+                        <Link
+                            to="/inscription"
+                            className="navbar-register"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            INSCRIPTION
+                        </Link>
+                    </div>
+
+                    <Link
+                        to="/#contact"
                         className="navbar-button"
                         onClick={() => setMenuOpen(false)}
                     >
                         PRENDRE RDV
-                    </a>
+                    </Link>
                 </nav>
 
             </div>

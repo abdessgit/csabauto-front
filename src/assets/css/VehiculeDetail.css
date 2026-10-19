@@ -8,6 +8,10 @@
   flex-direction: column;
   background: #fbfbfb;
   color: #111111;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 /* ESPACEMENT AVEC LE HEADER (NAVBAR FIXE DE 80PX)
@@ -15,11 +19,12 @@
    ou le fil d'Ariane soient écrasés sous la barre de navigation. */
 .vehicule-detail-main {
   flex: 1;
-  max-width: 1250px;
+  max-width: 1040px;
   width: 100%;
   margin: 0 auto;
   padding: 105px 16px 60px;
   box-sizing: border-box;
+  min-width: 0;
 }
 
 @media (min-width: 640px) {
@@ -73,20 +78,29 @@
 }
 
 /* ==========================================================================
-   LAYOUT PRINCIPAL (Mobile-first : 1 colonne, Desktop : 2 colonnes)
+   LAYOUT PRINCIPAL (Mobile-first : 1 colonne pleine largeur)
    ========================================================================== */
 .vehicule-detail-layout {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
   margin-bottom: 35px;
   text-align: left;
 }
 
+@media (min-width: 640px) {
+  .vehicule-detail-layout {
+    gap: 28px;
+  }
+}
+
 @media (min-width: 992px) {
   .vehicule-detail-layout {
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 40px;
+    gap: 32px;
     margin-bottom: 45px;
   }
 }
@@ -99,18 +113,20 @@
   flex-direction: column;
   gap: 12px;
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
 }
 
 /* IMAGE PRINCIPALE
-   Mobile : ratio 4/3 pour conserver les proportions des photos de voiture
-   sans les tronquer par une hauteur fixe trop basse.
-   Fond noir élégant et curseur zoom. */
+   Responsive sans largeur/hauteur fixe en px, ratio 16/10 moderne,
+   min-width: 0 pour éviter tout débordement sur petit écran (320px). */
 .vehicule-gallery-main {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
-  min-height: 240px;
-  max-height: 540px;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
   background: #0d0d0d;
   border-radius: 12px;
   overflow: hidden;
@@ -125,10 +141,14 @@
 
 .vehicule-gallery-main img {
   width: 100%;
-  height: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  max-height: 560px;
   object-fit: cover;
   object-position: center;
   display: block;
+  box-sizing: border-box;
   transition:
     transform 0.3s ease,
     opacity 0.25s ease;
@@ -189,6 +209,10 @@
 .vehicule-gallery-thumbs {
   display: flex;
   gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
   overflow-x: auto;
   padding-bottom: 6px;
   -webkit-overflow-scrolling: touch;
@@ -197,7 +221,7 @@
 .vehicule-gallery-thumb {
   width: 76px;
   height: 56px;
-  min-width: 76px;
+  max-width: 90px;
   min-height: 44px; /* Accessibilité tactile */
   border-radius: 6px;
   overflow: hidden;
@@ -209,6 +233,7 @@
   flex-shrink: 0;
   background: #222222;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @media (min-width: 640px) {
@@ -236,6 +261,10 @@
    FICHE SYNTHÉTIQUE ET ACTION
    ========================================================================== */
 .vehicule-info-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
   background: #ffffff;
   border: 1px solid #e5e5e5;
   border-radius: 14px;
@@ -340,6 +369,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  .vehicule-specs-table {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .spec-item {
   display: flex;
   justify-content: space-between;
@@ -409,21 +444,17 @@
 }
 
 /* ==========================================================================
-   SECTION BASSE : DESCRIPTION (Pleine largeur sur mobile et desktop)
+   DESCRIPTION DÉTAILLÉE (Pleine largeur sur mobile et desktop)
    ========================================================================== */
-.vehicule-bottom-grid {
-  width: 100%;
-  margin-top: 10px;
-  text-align: left;
-}
-
 .vehicule-desc-card {
   width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-width: 0;
   background: #ffffff;
   border: 1px solid #e5e5e5;
   border-radius: 14px;
   padding: 20px 16px;
-  box-sizing: border-box;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
 }
 
@@ -461,6 +492,7 @@
   line-height: 1.7;
   color: #333333;
   white-space: pre-line;
+  overflow-wrap: anywhere;
   word-break: break-word;
 }
 
@@ -468,6 +500,12 @@
   .vehicule-desc-content {
     font-size: 15px;
   }
+}
+
+.vehicule-desc-empty {
+  color: #888888;
+  font-style: italic;
+  margin: 0;
 }
 
 /* LOADING & ERROR */
@@ -478,6 +516,28 @@
   padding: 60px 20px;
   text-align: center;
   border: 1px solid #e5e5e5;
+}
+
+.vehicule-error-icon {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.vehicule-error-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 10px;
+  color: #111111;
+}
+
+.vehicule-error-text {
+  color: #777777;
+  margin-bottom: 25px;
+}
+
+.vehicule-error-btn {
+  display: inline-flex;
+  width: auto;
 }
 
 /* ==========================================================================

@@ -140,14 +140,14 @@ export default function VehiculeDetail() {
                     </div>
                 ) : error || !annonce ? (
                     <div className="vehicule-detail-error">
-                        <div style={{ fontSize: '42px', marginBottom: '15px' }}>🚗</div>
-                        <h2 style={{ fontSize: '22px', fontWeight: 800, margin: '0 0 10px' }}>
+                        <div className="vehicule-error-icon">🚗</div>
+                        <h2 className="vehicule-error-title">
                             {error || 'Véhicule introuvable'}
                         </h2>
-                        <p style={{ color: '#777', marginBottom: '25px' }}>
+                        <p className="vehicule-error-text">
                             Le véhicule que vous cherchez n’est actuellement pas accessible.
                         </p>
-                        <Link to="/vehicules" className="btn-contact-garage" style={{ display: 'inline-flex', width: 'auto' }}>
+                        <Link to="/vehicules" className="btn-contact-garage vehicule-error-btn">
                             ← Retour aux véhicules disponibles
                         </Link>
                     </div>
@@ -328,16 +328,14 @@ export default function VehiculeDetail() {
                                     )}
                                 </div>
                             </div>
-                        </div>
 
-                        {/* SECTION BASSE : DESCRIPTION (PLEINE LARGEUR) */}
-                        <div className="vehicule-bottom-grid">
+                            {/* BLOC DESCRIPTION DÉTAILLÉE (PLEINE LARGEUR) */}
                             <div className="vehicule-desc-card">
                                 <h2>Description détaillée</h2>
                                 {annonce.description ? (
                                     <div className="vehicule-desc-content">{annonce.description}</div>
                                 ) : (
-                                    <p style={{ color: '#888', fontStyle: 'italic' }}>
+                                    <p className="vehicule-desc-empty">
                                         Aucune description spécifique fournie pour ce véhicule. N'hésitez pas à
                                         nous contacter pour obtenir tous les détails techniques.
                                     </p>

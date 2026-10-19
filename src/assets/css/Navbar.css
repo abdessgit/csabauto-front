@@ -69,6 +69,12 @@
   padding: 13px 20px;
   font-weight: 800 !important;
 }
+.navbar-auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 .navbar-login,
 .navbar-register {
   display: inline-flex;
@@ -126,12 +132,15 @@
     top: 80px;
     left: 0;
     width: 100%;
+    box-sizing: border-box;
 
     display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
 
-    padding: 25px;
-
+    padding: 24px 20px;
     background: #0a0a0a;
   }
 
@@ -143,5 +152,47 @@
     width: 100%;
     text-align: center;
     padding: 10px;
+    box-sizing: border-box;
+  }
+
+  /* Conteneur des deux boutons d'authentification */
+  .navbar-auth-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+    margin: 4px auto;
+  }
+
+  /* Boutons réduits, centrés, hauteur tactile min 44px et largeur cohérente */
+  .navbar-login,
+  .navbar-register {
+    width: min(100%, 14rem);
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    font-size: clamp(0.75rem, 2.5vw, 0.85rem);
+    letter-spacing: 0.8px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .navbar-button {
+    width: min(100%, 14rem);
+    min-height: 44px;
+    padding: 0.5rem 1rem !important;
+    font-size: clamp(0.75rem, 2.5vw, 0.85rem) !important;
+    letter-spacing: 0.8px;
+    text-align: center;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
   }
 }

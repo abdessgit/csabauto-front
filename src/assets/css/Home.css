@@ -18,3 +18,11 @@
   flex-direction: column;
   box-sizing: border-box;
 }
+
+#accueil,
+#services,
+#about,
+#vehicules,
+#contact {
+  scroll-margin-top: 85px;
+}

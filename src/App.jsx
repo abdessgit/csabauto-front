@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ScrollToHash from './components/ScrollToHash';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './routes/ProtectedRoute';
 import RoleBasedRedirect from './routes/RoleBasedRedirect';
@@ -43,6 +44,7 @@ export default function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
+        <ScrollToHash />
         <Routes>
 
           {/* ================= SITE PUBLIC ================= */}
